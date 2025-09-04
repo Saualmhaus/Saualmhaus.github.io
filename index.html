@@ -127,6 +127,7 @@
 
   <script>
     // Funktion zum Umschalten zwischen Teaser- und Vollansicht
+     // Funktion zum Umschalten zwischen Teaser- und Vollansicht
     function toggleWebsite() {
       const teaserSite = document.getElementById('teaser-site');
       const fullSite = document.getElementById('full-site');
@@ -150,10 +151,10 @@
       }
     }
 
-    // Event-Listener für die Tastenkombination F + J
+    // Event-Listener für die Tastenkombination Strg + J (oder Cmd + J auf Mac)
     document.addEventListener('keydown', (event) => {
-      // Überprüfe, ob F und J gleichzeitig gedrückt werden
-      if (event.key === 'j' && (event.key === 'f' || event.ctrlKey || event.metaKey)) {
+      // Überprüfe, ob die J-Taste und gleichzeitig die Strg- oder Meta-Taste gedrückt werden
+      if ((event.ctrlKey || event.metaKey) && event.key === 'j') {
         event.preventDefault(); // Verhindert Standard-Browseraktionen
         toggleWebsite();
       }
